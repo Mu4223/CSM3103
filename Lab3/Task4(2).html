@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		input[type="text"] {
+			padding: 10px;
+			font-size: 20px;
+			border: 2px solid black;
+		}
+	</style>
+</head>
+<body>
+	<label for="myTextField">Enter some text:</label>
+	<input type="text" id="myTextField">
+	<script>
+		var textField = document.getElementById("myTextField");
+		textField.onchange = function() {
+			this.value = this.value.toUpperCase();
+		};
+		textField.onfocus = function() {
+			this.style.backgroundColor = "pink";
+		};
+		textField.onblur = function() {
+			this.style.backgroundColor = "white";
+		};
+	</script>
+</body>
+</html>
